@@ -2,6 +2,7 @@
 Main program
 """
 import os
+import sys
 import socket
 import threading
 from .lib.connection import Connection
@@ -62,9 +63,8 @@ class Main(object):
             script_path = os.path.join(service_path, 'lib', 'gpio_setup.sh')
             try:
                 os.system("sh " + script_path + " " + str(gpio.get_port()))
-            except Exception:
-                print('On GPIO: ' + str(gpio.get_port()))
-                print(Exception.message)
+            except Exception as e:
+                sys.stderr.write('On GPIO: ' + str(gpio.get_port()) + " " + e)
 
     def __prepare_socket(self):
         """
