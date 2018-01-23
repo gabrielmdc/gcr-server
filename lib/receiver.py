@@ -12,9 +12,9 @@ Protocol:
 import threading
 import os
 import sys
-from supervisor import SupervisorThread
-from models.gpio import Gpio
-from repository.repositories import Repositories
+from .supervisor import SupervisorThread
+from .models.gpio import Gpio
+from .repository.repositories import Repositories
 
 
 class ReceiverThread(threading.Thread):

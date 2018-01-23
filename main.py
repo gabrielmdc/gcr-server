@@ -4,9 +4,9 @@ Main program
 import os
 import socket
 import threading
-from lib.connection import Connection
-from lib.supervisor import SupervisorThread
-from lib.repository.repositories import Repositories
+from .lib.connection import Connection
+from .lib.supervisor import SupervisorThread
+from .lib.repository.repositories import Repositories
 
 
 class Main(object):

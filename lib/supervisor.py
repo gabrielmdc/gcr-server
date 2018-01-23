@@ -3,7 +3,7 @@ Module Supervisor
 """
 import threading
 import sys
-from sender import SenderThread
+from .sender import SenderThread
 
 
 class SupervisorThread(threading.Thread):

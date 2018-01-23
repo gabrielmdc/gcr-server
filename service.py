@@ -2,7 +2,7 @@
 Main program
 """
 import sys
-from main import Main
+from .main import Main
 
 SOCKET_PORT = 10001
 DB_FILE = "lib/resources/database.db"
