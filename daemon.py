@@ -3,7 +3,7 @@ import sys
 from main import Main
 from .pydaemon import PyDaemon
 
-SOCKET_PORT = 10001
+SOCKET_PORT = 10000
 DB_FILE = "lib/resources/database.db"
 
 
