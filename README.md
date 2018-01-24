@@ -9,11 +9,12 @@ both connected under the same **local net**.
 
 Requirements
 ==============
-- Python 3.x
 - Raspberry Pi or compatible
 - A Gnu/Linux system installed ([LibreELEC OS](https://libreelec.tv/)
  recommended, if you want to install this in a 
 different OS, please check the Gpio path in [the notes](###gpio-path))
+    - Python 3.x
+    - Systemd
 
 Installation
 ==============
