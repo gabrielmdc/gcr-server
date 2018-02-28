@@ -15,7 +15,7 @@ class Daemon(PyDaemon):
             while True:
                 m.listen_new_connection()
         except Exception as e:
-            sys.stderr.write(e)
+            sys.stderr.write(str(e))
         finally:
             m.close_socket_connection()
             sys.exit(1)
