@@ -35,7 +35,7 @@ class Main(object):
         and create the supervisor in case that is not already created
         :return: void
         """
-        conn, client_address = self.__socket.accept()
+        conn, client_address = self.__socket.accept()  # conn variable is a Socket
         connection = Connection(conn, (client_address[0], self.__socket_port), self.__event, self.__db_file)
         connection.start()
 
@@ -64,7 +64,7 @@ class Main(object):
             try:
                 os.system("sh " + script_path + " " + str(gpio.get_port()))
             except Exception as e:
-                sys.stderr.write('On GPIO: ' + str(gpio.get_port()) + " " + e)
+                sys.stderr.write('On GPIO: ' + str(gpio.get_port()) + " " + str(e))
 
     def __prepare_socket(self):
         """
