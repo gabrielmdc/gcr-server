@@ -49,7 +49,6 @@ class Main(object):
         and stop the supervisor
         :return: void
         """
-        print('Closing connections and threads...')
         self.__socket.close()
         self.__supervisor.stop()
 

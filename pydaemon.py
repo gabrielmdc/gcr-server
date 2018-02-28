@@ -111,7 +111,7 @@ class PyDaemon:
                 if os.path.exists(self.pidfile):
                     os.remove(self.pidfile)
             else:
-                print (str(err.args))
+                sys.stderr.write(str(err.args))
                 sys.exit(1)
 
     def restart(self):
