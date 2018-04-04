@@ -34,7 +34,7 @@ class AddAction(threading.Thread):
             AddAction.prepare_gpios([new_gpio])
             SupervisorThread.gpios.append(new_gpio)
         except Exception as e:
-            sys.stderr.write(e.message)
+            sys.stderr.write(str(e))
 
     @staticmethod
     def prepare_gpios(gpios):
@@ -49,4 +49,4 @@ class AddAction(threading.Thread):
             try:
                 os.system("sh " + script_path + " " + str(gpio.get_port()))
             except Exception as e:
-                sys.stderr.write('On Gpio: ' + str(gpio.get_port()) + e.message)
+                sys.stderr.write('On Gpio: ' + str(gpio.get_port()) + str(e))
