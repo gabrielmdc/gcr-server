@@ -34,4 +34,4 @@ class UpdateAction(threading.Thread):
             self.__gpio.set_port(self.__port)
             self.__gpio.set_inverted(self.__inverted)
         except Exception as e:
-            sys.stderr.write(e.message)
+            sys.stderr.write(str(e))
