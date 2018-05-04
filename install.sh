@@ -3,8 +3,8 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cp ${DIR}/gpio-control-relay.service /etc/systemd/system/
+cp ${DIR}/gcr-server.service /etc/systemd/system/
 systemctl daemon-reload
-systemctl start gpio-control-relay
-systemctl status gpio-control-relay
+systemctl start gcr-server
+systemctl status gcr-server
 echo "Installation done!"
