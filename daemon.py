@@ -25,7 +25,7 @@ class Daemon(PyDaemon):
 
 
 if __name__ == "__main__":
-    daemon = Daemon("/tmp/gpio-relay-control.pid")
+    daemon = Daemon("/tmp/gcr-server.pid")
     if len(sys.argv) > 1:
         if 'start' == sys.argv[1]:
             daemon.start()
