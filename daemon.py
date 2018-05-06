@@ -4,7 +4,7 @@ from main import Main
 from .pydaemon import PyDaemon
 
 SOCKET_PORT = 10000
-DB_FILE = "lib/resources/database.db"
+DB_FILE = "resources/database.db"
 
 
 class Daemon(PyDaemon):

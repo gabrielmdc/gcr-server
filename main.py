@@ -5,9 +5,9 @@ import os
 import sys
 import socket
 import threading
-from .lib.connection import Connection
-from .lib.supervisor import SupervisorThread
-from .lib.repository.repositories import Repositories
+from lib.connection import Connection
+from lib.supervisor import SupervisorThread
+from lib.repository.repositories import Repositories
 
 
 class Main(object):
@@ -62,7 +62,7 @@ class Main(object):
         for gpio in gpios:
             service_path = os.path.dirname(os.path.realpath(__file__))
             script_path = os.path.join(service_path, 'lib', 'gpio_setup.sh')
-            gpio_status = 'high' if gpio.is_inverted() else 'low'
+            gpio_status = '1' if gpio.is_inverted() else '0'
             script = "sh " + script_path + " " + str(gpio.get_port()) + " " + gpio_status
             try:
                 os.system(script)
