@@ -9,8 +9,9 @@ else
     cp -r ${DIR} /usr/lib/gcr-server
 fi
 
-cp /usr/lib/gcr-server/gcr-server.service /etc/systemd/system/
+cp /usr/lib/gcr-server/gcr-server.service /lib/systemd/system/
 systemctl daemon-reload
-systemctl start gcr-server
-systemctl status gcr-server
+systemctl enable gcr-server.service
+systemctl start gcr-server.service
+systemctl status gcr-server.service
 echo "Installation done!"
