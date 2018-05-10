@@ -1,7 +1,7 @@
-#!/usr/bin/python3 -p
+#!/usr/bin/python3
 import sys
 from main import Main
-from .pydaemon import PyDaemon
+from pydaemon import PyDaemon
 
 SOCKET_PORT = 10000
 DB_FILE = "/usr/lib/gcr-server/resources/database.db"

@@ -9,6 +9,7 @@ else
     cp -r ${DIR} /usr/lib/gcr-server
 fi
 
+chmod 744 /usr/lib/gcr-server/daemon.py
 cp /usr/lib/gcr-server/gcr-server.service /lib/systemd/system/
 systemctl daemon-reload
 systemctl enable gcr-server.service
