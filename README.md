@@ -19,9 +19,33 @@ and run _/install.sh_ as superuser:
 
 ```bash
 su
-./install.sh
+bash install.sh
+# or
+sudo bash install.sh
 ```
 This will create a daemon in the system that is listening for new connections on the port 10000.
+
+## Uninstall
+```bash
+cd /usr/lib/gcr-server
+sudo bash uninstall.sh
+```
+
+## Service commands
+To start the service manually
+```bash
+sudo systemctl start gcr-server.service
+```
+
+To stop the service
+```bash
+sudo systemctl stop gcr-server.service
+```
+
+To restart the service
+```bash
+sudo systemctl restart gcr-server.service
+```
 
 ## Configuration
 It is necessary a client to add relays and configure their gpio ports.
